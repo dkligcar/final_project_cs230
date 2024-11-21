@@ -10,7 +10,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 def read_data():
-    data = pd.read_csv('/Users/dk/Downloads/archive/Datafiniti_Fast_Food_Restaurants.csv')
+    data = pd.read_csv('Datafiniti_Fast_Food_Restaurants.csv')
     data['dateAdded'] = pd.to_datetime(data['dateAdded'])
     data['year'] = data['dateAdded'].dt.year  # dateAdded to year
 
