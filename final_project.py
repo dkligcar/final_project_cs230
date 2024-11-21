@@ -10,7 +10,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 
 def read_data():
-    data = pd.read_csv('Datafiniti_Fast_Food_Restaurants.csv')
+    data = pd.read_csv('/Users/dk/PycharmProjects/CS260 /Datafiniti_Fast_Food_Restaurants.csv')
     data['dateAdded'] = pd.to_datetime(data['dateAdded'])
     data['year'] = data['dateAdded'].dt.year  # dateAdded to year
 
@@ -73,7 +73,7 @@ def generate_horizontal_bar_chart(data):
 
 #ST Setup
 st.markdown("<h1 style='text-align: center;'><u>Presence of Fast-Food Restaurants Across the United States</u></h1>", unsafe_allow_html=True)
-
+st.image('/Users/dk/PycharmProjects/CS260 /mcdonaldspic.jpg', caption="The first McDonald's restaurant")
 data = read_data()
 
 # Total restaurants by state
@@ -117,7 +117,7 @@ generate_horizontal_bar_chart(data)
 st.markdown("<hr>", unsafe_allow_html=True)
 
 
-
+st.image('/Users/dk/PycharmProjects/CS260 /oldschoolfastfood.jpg', caption="Old School Fast-Food")
 
 #Summary
 st.markdown("""
